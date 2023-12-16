@@ -8,7 +8,6 @@ body {
 }
 
 .container {
-	display: flex;
 	width: 390px;
 	overflow-x: hidden;
 }
