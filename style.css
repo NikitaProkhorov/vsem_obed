@@ -9,7 +9,6 @@ body {
 .container {
 	width: 390px;
 	overflow-x: hidden;
-	border:1px solid black;
 }
 
 .inner {
