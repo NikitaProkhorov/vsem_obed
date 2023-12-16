@@ -11,7 +11,7 @@
 <body>
 	<div class="container">
 
-		<div class="scroll" onmousedown='grab(this)' id="dateScroll">
+		<div class="scroll" ontouchstart="touchStart(event)" ontouchmove="touchMove(event)" onmousedown='grab(this)' id="dateScroll">
 			<!-- Динамические даты будут здесь -->
 		</div>
 
