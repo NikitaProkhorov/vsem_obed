@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://unpkg.com/simplebar/dist/simplebar.min.css" rel="stylesheet">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="scroll" onmousedown='grab(this)' id="dateScroll">
+			<!-- Динамические даты будут здесь -->
+		</div>
+
+
+		<div class="text-cont">
+				<h3 class="zag">Основные блюда</h3>
+				<p class="text">Мы предлагаем вам самые свежие и вкусные блюда, которые точно порадуют вас и ваших близких!</p>
+		</div>
+
+		<div class="inner">
+			<div class="item" onclick="openNewPage('page_url_1')">
+				<img src="1.jpg" alt="" class="img">
+				<h4 class="name">Свиные ребра в пивной глазури</h4>
+				<p class="desc">Свиные ребра в пивной глазури с салотом из чего-то</p>
+				<div class="but"> 
+					<button class="btn" id="btn1">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="2.jpg" alt="" class="img">
+				<h4 class="name">Каша рисовая</h4>
+				<p class="desc">Рис, молоко, масло сливочное</p>
+				<div class="but"> 
+					<button class="btn" id="btn2">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="2.jpg" alt="" class="img">
+				<h4 class="name">Куриный суп</h4>
+				<p class="desc">Куриное филе, лук, морковь, лапша</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="1.jpg" alt="" class="img">
+				<h4 class="name">Печень в сливочном соусе</h4>
+				<p class="desc">Печень куриная, сливки, лук, чеснок</p>
+				<div class="but"> 
+					<button class="btn" id="btn4">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="1.jpg" alt="" class="img">
+				<h4 class="name">Курица в соусе терияки</h4>
+				<p class="desc">Куриное филе, перец болг, кунжут, лук зеленый, соус терияки</p>
+				<div class="but"> 
+					<button class="btn" id="btn5">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="2.jpg" alt="" class="img">
+				<h4 class="name">Рис с овощами</h4>
+				<p class="desc">Рис, морковь, кукуруза</p>
+				<div class="but"> 
+					<button class="btn" id="btn6">Add</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="text-cont2">
+			<h3 class="zag">Салаты</h3>
+			<p class="text">Каждый салат готовится непосредственно перед доставкой, чтобы сохранить свежесть и сохранить все полезные свойства ингредиентов. Мы стремимся предложить вам только самые свежие салаты!</p>
+		</div>
+
+		<div class="inner">
+			<div class="item">
+				<img src="1.jpg" alt="" class="img">
+				<h4 class="name">Свиные ребра в пивной глазури</h4>
+				<p class="desc">Свиные ребра в пивной глазури с салотом из чего-то</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="2.jpg" alt="" class="img">
+				<h4 class="name">Каша рисовая</h4>
+				<p class="desc">Рис, молоко, масло сливочное</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="2.jpg" alt="" class="img">
+				<h4 class="name">Куриный суп</h4>
+				<p class="desc">Куриное филе, лук, морковь, лапша</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="1.jpg" alt="" class="img">
+				<h4 class="name">Печень в сливочном соусе</h4>
+				<p class="desc">Печень куриная, сливки, лук, чеснок</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="1.jpg" alt="" class="img">
+				<h4 class="name">Курица в соусе терияки</h4>
+				<p class="desc">Куриное филе, перец болг, кунжут, лук зеленый, соус терияки</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="2.jpg" alt="" class="img">
+				<h4 class="name">Рис с овощами</h4>
+				<p class="desc">Рис, морковь, кукуруза</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="text-cont2">
+			<h3 class="zag">Дополнительно</h3>
+			<p class="text">Всё необходимое для вкусного перекуса на обеде!</p>
+		</div>
+
+		<div class="inner">
+			<div class="item">
+				<img src="1.jpg" alt="" class="img">
+				<h4 class="name">Свиные ребра в пивной глазури</h4>
+				<p class="desc">Свиные ребра в пивной глазури с салотом из чего-то</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="2.jpg" alt="" class="img">
+				<h4 class="name">Каша рисовая</h4>
+				<p class="desc">Рис, молоко, масло сливочное</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="2.jpg" alt="" class="img">
+				<h4 class="name">Куриный суп</h4>
+				<p class="desc">Куриное филе, лук, морковь, лапша</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="1.jpg" alt="" class="img">
+				<h4 class="name">Печень в сливочном соусе</h4>
+				<p class="desc">Печень куриная, сливки, лук, чеснок</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="1.jpg" alt="" class="img">
+				<h4 class="name">Курица в соусе терияки</h4>
+				<p class="desc">Куриное филе, перец болг, кунжут, лук зеленый, соус терияки</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="2.jpg" alt="" class="img">
+				<h4 class="name">Рис с овощами</h4>
+				<p class="desc">Рис, морковь, кукуруза</p>
+				<div class="but"> 
+					<button class="btn" id="btn3">Add</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+
+	<script src="https://unpkg.com/simplebar/dist/simplebar.min.js"></script>
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="app.js"></script>
+
+	<script>
+		const dateScrollContainer = document.getElementById('dateScroll');
+		const today = new Date();
+
+		for (let i = 0; i < 30; i++) {
+			const currentDate = new Date(today);
+			currentDate.setDate(today.getDate() + i);
+
+			// Проверяем, является ли текущая дата субботой или воскресеньем (0 - воскресенье, 6 - суббота)
+			const dayOfWeek = currentDate.getDay();
+			if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+				const newDateElement = document.createElement('div');
+				newDateElement.classList.add('card');
+
+				const formattedDate = `${('0' + currentDate.getDate()).slice(-2)}.${('0' + (currentDate.getMonth() + 1)).slice(-2)}.${String(currentDate.getFullYear()).slice(-2)}`;
+
+				newDateElement.innerHTML = `<h2>${formattedDate}</h2>`;
+				dateScrollContainer.appendChild(newDateElement);
+			}
+		}
+    </script>
+
+</body>
+</html>
