@@ -101,6 +101,24 @@ function openNewPage(url) {
 
 
 
+let initialX = null;
+
+function touchStart(event) {
+    initialX = event.touches[0].clientX;
+}
+
+function touchMove(event) {
+    if (initialX === null) {
+        return;
+    }
+
+    const currentX = event.touches[0].clientX;
+    const diffX = initialX - currentX;
+
+    event.currentTarget.scrollLeft += diffX;
+    initialX = currentX;
+}
+
 
 
 
