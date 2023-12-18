@@ -33,7 +33,7 @@ body {
 
 .item {
 	/* text-align: center; */
-	box-shadow: 0px 5px 6px rgba(34, 60, 80, 0.11);
+	box-shadow: 0px 0px 25px rgba(13, 22, 29, 0.247);
 	border-radius: 8px;
 	background-color: #fff;
 	width: 180px;
