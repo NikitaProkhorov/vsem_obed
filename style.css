@@ -1,3 +1,9 @@
+/* Стили для ПК (ширина экрана более 768px) */
+@media only screen and (min-width: 769px) {
+    /* Ваш CSS для ПК здесь */
+    /* Например, увеличение размера шрифта или изменение расположения элементов */
+}
+
 body {
 	display: flex;
 	margin: 0;
@@ -8,7 +14,6 @@ body {
 }
 
 .container {
-	width: 390px;
 	overflow-x: hidden;
 }
 
@@ -16,24 +21,21 @@ body {
 	display: grid;
 	gap: 10px;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 260px 260px 260px;
+	grid-auto-rows: 260px;
 	padding: 10px;
-	
 }
 
 .img {
 	width: 100%;
 	border-radius: 8px;
-/* 	border:1px solid black; */
+	/* border: 1px solid firebrick; */
 }
 
 .item {
 	/* text-align: center; */
 	box-shadow: 0px 5px 6px rgba(34, 60, 80, 0.11);
 	border-radius: 8px;
-/* 	background-color: #fff; */
-	background: var(--tg-theme-bg-color);
-	color: var(--tg-theme-text-color);
+	background-color: #fff;
 	width: 180px;
 	z-index: 1;
 }
@@ -41,12 +43,7 @@ body {
 
 .text-cont {
 	padding: 10px;
-	margin-top: -20px;
-}
-
-.text-cont2 {
-	padding: 10px;
-	margin-top: -10px;
+	margin-top: 40px;
 }
 
 .zag {
@@ -62,10 +59,11 @@ body {
 
 .name {
 	font-size: 15px;
+	font-weight: bold;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-top: -5px;
+	margin-top: 0px;
 	height: 40px;
 
 	display: -webkit-box;
@@ -76,11 +74,11 @@ body {
 }
 
 .desc {
-	font-size: 13px;
+	font-size: 12px;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-top: -10px;
+	margin-top: 10px;
 	height: 35px;
 
 	display: -webkit-box;
@@ -106,9 +104,9 @@ body {
 }
 
 .but {
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-top: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 10px;
 }
 
 .btn:hover {
@@ -122,6 +120,8 @@ body {
 
 
 .scroll {
+	position: fixed;
+	background-color: #fff;
     cursor: grab;
     cursor: -webkit-grab;
     width: 100%; 
@@ -130,6 +130,7 @@ body {
     white-space: nowrap; /* Однострочное расположение элементов */
 	padding: 10px;
 	border-bottom: 1px solid #ebebeb;
+	z-index: 100;
 }
   
 .scroll:active {
@@ -154,3 +155,8 @@ body {
 .card:hover {
 	background: rgb(255, 247, 232);
 }
+
+.selected {
+	background-color: rgb(248, 168, 24);
+}
+
