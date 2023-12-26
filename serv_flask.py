@@ -66,7 +66,7 @@ def add_to_card():
 
 @app.after_request
 def add_cors_headers(response):
-    response.headers['Access-Control-Allow-Origin'] = 'http://127.0.0.1:5500'  # Укажите адрес вашего фронтенд-приложения
+    response.headers['Access-Control-Allow-Origin'] = 'https://nikitaprokhorov.github.io/vsem_obed/html/index2.html'  # Укажите адрес вашего фронтенд-приложения
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS, PUT, DELETE'
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
     return response
