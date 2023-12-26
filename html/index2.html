@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css">
+	<link href="https://unpkg.com/simplebar/dist/simplebar.min.css" rel="stylesheet">
+	<title>Всем обед</title>
+	
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="scroll" onmousedown='grab(this)' id="dateScroll">
+			<!-- Динамические даты -->
+		</div>
+
+
+		<div class="text-cont">
+				<h3 class="zag">Основные блюда</h3>
+				<p class="text">Мы предлагаем вам самые свежие и вкусные блюда, которые точно порадуют вас и ваших близких!</p>
+		</div>
+
+		<div class="inner" id="menuItems">
+			<!-- Элементы меню -->
+		</div>
+
+	</div>
+	
+
+	<script src="https://unpkg.com/simplebar/dist/simplebar.min.js"></script>
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+	<script src="/js/app.js"></script>
+	<script src="/js/dateHandler.js"></script>
+	<script src="/js/menuHandler.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="product-page">
+        <div class="cont-back">
+            <button class="back-btn" onclick="goToHomePage()">
+                <img src="/Back.png" alt="" class="back-img">
+            </button>
+        </div>
+        <div class="cont-cart">
+            <button class="cart-btn" onclick="goToHomePage()">
+                <img src="/Cart.png" alt="" class="cart-img">
+            </button>
+        </div>
+        <img src="/2.jpg" alt="" class="product-img">
+        <div class="div-line"> 
+            <hr class="line"> </hr>
+        </div>
+        <h1 class="product-name">Название продукта</h1>
+        <p class="product-description">Описание продукта</p>
+        <div class="product-but">
+            <div class="count">
+                <button class="minus-btn">-</button>
+                <span class="product-quantity">1</span>
+                <button class="plus-btn">+</button>
+            </div>
+                <button class="product-btn">Цена</button>
+        </div>
+    </div>
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+            const results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Получаем itemId из URL страницы
+        const itemId = getParameterByName('itemId');
+        console.error('itemId:', itemId);
+
+        function fetchProductDetails(itemId) {
+            fetch(`http://127.0.0.1:5000/get_product/${itemId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok.');
+                    }
+                    return response.json();
+                })
+                .then(productData => {
+                    console.log(productData);
+                    // Находим элементы на странице, которые мы хотим обновить
+                    const nameElement = document.querySelector('.product-name');
+                    const descElement = document.querySelector('.product-description');
+                    const btnElement = document.querySelector('.product-btn');
+
+                    // Обновляем содержимое элементов на странице данными из JSON-объекта
+                    nameElement.textContent = productData.prod_info[0][4]; // Название продукта
+                    descElement.textContent = productData.prod_info[0][5]; // Описание продукта
+                    btnElement.textContent = "Добавить "+`${productData.prod_info[0][7]}₽`; // Цена продукта внутри кнопки
+
+                    // Настроим кнопку для добавления
+                    btnElement.addEventListener('click', () => {
+                        // Добавьте здесь логику для добавления блюда в корзину или что-то подобное
+                        console.log('Товар добавлен в корзину');
+                        window.location.href = "http://127.0.0.1:5500/html/index2.html";
+                    });
+                })
+                .catch(error => {
+                    console.error('Ошибка при получении информации о продукте:', error);
+                });
+        }
+
+        // Вызываем функцию для загрузки информации о продукте по его ID
+        if (itemId) {
+            fetchProductDetails(itemId);
+        }
+
+
+
+
+        // Находим элементы DOM
+        const minusButton = document.querySelector('.minus-btn');
+        const plusButton = document.querySelector('.plus-btn');
+        const quantityDisplay = document.querySelector('.product-quantity');
+
+        // Обработчики событий для кнопок "-" и "+"
+        minusButton.addEventListener('click', () => {
+            let quantity = parseInt(quantityDisplay.textContent);
+            if (quantity > 1) {
+                quantity--;
+                quantityDisplay.textContent = quantity;
+            }
+        });
+
+        plusButton.addEventListener('click', () => {
+            let quantity = parseInt(quantityDisplay.textContent);
+            quantity++;
+            quantityDisplay.textContent = quantity;
+        });
+
+
+        function goToHomePage() {
+            // Здесь можно задать логику для перехода на главную страницу
+            // Например, с помощью JavaScript можно использовать window.location.href
+            window.location.href = "http://127.0.0.1:5500/html/index2.html";
+        }
+
+    </script>
+</body>
+</html>
